@@ -57,6 +57,7 @@ def ToDicts(node, name):
   }
   if node.children:
     d['children'] = [ToDicts(v, k) for k, v in node.children.iteritems()]
+    d['data']['$dominant_symbol'] = 'node'
   return d
 
 
